@@ -14,7 +14,7 @@ const courses: Course[] = [
     description: "React 19, Server Components, and the App Router.",
     credits: 5,
     isElective: false,
-    likes: 24,
+    likes: 9,
   },
   {
     id: "backend-fastapi",
