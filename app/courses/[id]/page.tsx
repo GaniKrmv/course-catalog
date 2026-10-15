@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { getCourse } from "@/lib/courses";
 import LikeButton from "@/components/LikeButton";
+import { EnrollForm } from "@/components/EnrollForm";
 
 export default async function CoursePage({
   params,
@@ -22,7 +23,11 @@ export default async function CoursePage({
         {course.credits} credits &nbsp;·&nbsp;{" "}
         {course.isElective ? "Elective" : "Required"}
       </p>
-      <LikeButton initialLikes={course.likes} />
+      <LikeButton courseId={course.id} initialLikes={course.likes} />
+      <section className="mt-8">
+        <h2 className="mb-4 text-xl font-semibold">Enroll in this course</h2>
+        <EnrollForm courseId={course.id} />
+      </section>
     </div>
   );
 }
