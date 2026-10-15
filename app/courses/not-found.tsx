@@ -5,7 +5,7 @@ export default function NotFound() {
     <div>
       <h1 className="text-2xl font-bold mb-3">Course not found</h1>
       <p className="text-gray-600 mb-5">
-        That course doesn't exist in the catalog.
+        That course does not exist in the catalog.
       </p>
       <Link
         href="/courses"
